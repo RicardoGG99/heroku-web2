@@ -1,24 +1,5 @@
 package controllers;
 
-<<<<<<< HEAD
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-import helpers.Conexion;
-import helpers.PasswordHashing;
-import helpers.PropertiesReader;
-
-public class UserManager {
-	PropertiesReader properties = new PropertiesReader();
-    Conexion conn = new Conexion();
-    Connection connection = conn.getConnection();
-    PasswordHashing ph = new PasswordHashing();
-    PropertiesReader pr = new PropertiesReader();
-    
-    public boolean insert(String username, String password, String email) {
-=======
-
 import java.sql.Connection;
 
 
@@ -35,7 +16,6 @@ public class UserManager {
     
     
     public boolean register(String username, String password, String email) {
->>>>>>> da31533... Initialize
     	String sentence = "INSERT INTO registro (username, pass, email) VALUES (?, ?, ?)";
 		boolean result = false;
 		
@@ -47,23 +27,14 @@ public class UserManager {
 			ps.setString(3, email);
 			ps.executeUpdate();
 			result = true; 
-<<<<<<< HEAD
-			System.out.println(pr.getResult("registro"));
 			ps.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println(pr.getResult("registro"));
-=======
-			ps.close();
-		} catch (SQLException e) {
 			result = false;
->>>>>>> da31533... Initialize
-		}
+		} 
 		
 		return result;
 	}
-<<<<<<< HEAD
-=======
     
     public boolean login(String username, String password) {
     	String sentence1 = "SELECT * FROM registro WHERE username = ? AND pass = ?";
@@ -109,5 +80,4 @@ public class UserManager {
     	return result;
     }
     
->>>>>>> da31533... Initialize
 }
