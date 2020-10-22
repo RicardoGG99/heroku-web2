@@ -31,9 +31,9 @@ public class Login extends HttpServlet {
 		boolean result = um.login(username, newPassword);
 		
 		if(result == true) {
-			response.sendRedirect("public/views/logged.html");
+			response.getWriter().print("Si" + "\n" +  username + "\n" + newPassword);
 		}else {
-			response.sendRedirect("public/views/notlog.html");
+			response.getWriter().print("No" + "\n" +  username + "\n" + newPassword);
 		}
 	}
 

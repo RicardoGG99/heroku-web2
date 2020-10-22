@@ -33,9 +33,9 @@ public class Register extends HttpServlet {
 		boolean result = um.register(username, newPassword, email);
 		
 		if(result == true) {
-			response.sendRedirect("public/views/new.html");
+			response.getWriter().print("Si" + "\n" +  username + "\n" + newPassword + "\n" + email);
 		}else {
-			response.sendRedirect("public/views/exist.html");
+			response.getWriter().print("No" + "\n" +  username + "\n" + newPassword + "\n" + email);
 		}
 	}
 
