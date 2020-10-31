@@ -15,7 +15,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/Register</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>Login</servlet-name>
@@ -23,6 +23,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
 </web-app>
