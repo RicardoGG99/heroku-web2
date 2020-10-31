@@ -14,7 +14,7 @@ import helpers.PasswordHashing;
 
 @WebServlet("/Register")
 public class Register extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID =  102831973239L;
 	PasswordHashing ph = new PasswordHashing();
 	
     public Register() {
